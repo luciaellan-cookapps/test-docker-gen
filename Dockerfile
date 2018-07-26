@@ -1,5 +1,6 @@
 FROM jwilder/docker-gen
 
+RUN mkdir -p /etc/nginx/conf.d/
 RUN { \
       echo 'proxy_connect_timeout 10m;'; \
       echo 'proxy_send_timeout 10m;'; \
