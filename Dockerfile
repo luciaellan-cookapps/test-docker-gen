@@ -1,5 +1,7 @@
 FROM jwilder/docker-gen
 
+COPY ./templates/nginx.tmpl /etc/docker-gen/templates/nginx.tmpl
+
 RUN mkdir -p /etc/nginx/conf.d/
 RUN { \
       echo 'proxy_connect_timeout 10m;'; \
