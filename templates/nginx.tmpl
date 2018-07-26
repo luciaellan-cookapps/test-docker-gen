@@ -63,6 +63,9 @@ server {
 		proxy_read_timeout 10m;
 		send_timeout 10m;
 
+    # increased max body size
+    client_max_body_size 100M;
+
 		# HTTP 1.1 support
 		proxy_http_version 1.1;
 		proxy_set_header Connection "";
